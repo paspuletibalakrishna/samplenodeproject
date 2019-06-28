@@ -8,9 +8,6 @@ const staticpath = path.join(__dirname,'../public')
 app.use(express.static(staticpath))
 
 app.set('view engine', 'hbs')
-// app.get('', (req, res) => {
-//    res.send('Hello this is bala first node program in browser')
-// })
 
 app.get('', (req, res) => {
     res.render('index', {
