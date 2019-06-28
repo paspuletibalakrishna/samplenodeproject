@@ -4,6 +4,7 @@ const path = require('path')
 const app = express()
 
 const staticpath = path.join(__dirname,'../public')
+const port = process.env.PORT || 3000
 
 app.use(express.static(staticpath))
 
@@ -24,6 +25,6 @@ app.get('/help', (req, res) => {
     res.send('About page in browser')
  })
 
- app.listen(3000, () => {
-     console.log('Server is up and running on Port 3000')
+ app.listen(port, () => {
+     console.log('Server is up and running on Port' + port)
  })
